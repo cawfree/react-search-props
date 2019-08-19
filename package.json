@@ -1,0 +1,18 @@
+e
+  "name": "@cawfree/react-search-props",
+  "keywords": [
+    "react",
+    "react-native",
+    "search",
+    "recurse",
+    "find",
+    "props"
+  ],
+  "version": "0.0.1",
+  "description": "Recurse through the React DOM in search of a named prop.",
+  "main": "index.js",
+  "repository": "https://github.com/cawfree/react-search-props",
+  "author": "Alex Thomas (@cawfree) <hello@cawfree.com>",
+  "license": "MIT",
+  "private": false
+}
