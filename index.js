@@ -3,10 +3,10 @@ function shouldSearchProps(
   inSearchOf = 'onPress',
 ) {
   const { props } = ref;
-  const { children } = props;
+  const { children } = props || {};
   return [
-    props[inSearchOf],
-    ...React.Children.toArray(children)
+    (props || {})[inSearchOf],
+    ...React.Children.toArray(children || [])
       .map(e => shouldSearchProps(e))
       .reduce(
         (v, a) => ([

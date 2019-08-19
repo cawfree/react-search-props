@@ -8,7 +8,7 @@
     "find",
     "props"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Recurse through the React DOM in search of a named prop.",
   "main": "index.js",
   "repository": "https://github.com/cawfree/react-search-props",
