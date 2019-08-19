@@ -2,7 +2,9 @@
 Recurse through the React DOM in search of a named prop. Compatible with [React](https://reactjs.org/) and [React Native](https://facebook.github.io/react-native/).
 
 ## 🤔 About
-This library accumulates all of the values of a specific named prop inherited by all children of a specified node. There are _plenty_ of caveats to its use, and you should likely _never_ need to use this at all. Normally, ascertaining the values of particular props is achieved using either a well structured application _state_ using a framework such as [redux](https://redux.js.org/introduction/getting-started), or via a _callback_ interface. You will only ever need to use this if you're doing something intentionally _hacky_.
+This library accumulates all of the values of a specific named prop inherited by all children of a specified node. There are _plenty_ of caveats to its use, and you should likely never need to use this at all. Normally, ascertaining the values of particular props is achieved using either a well structured application state using a framework such as [redux](https://redux.js.org/introduction/getting-started), or via a child-to-parent callback interface.
+
+You will only ever need to use this if you're doing something **intentionally hacky**.
 
 This library exports a single function:
 
@@ -10,8 +12,10 @@ This library exports a single function:
 searchPropsByName(
   ref, // PropTypes.element.isRequired,
   inSearchOf, // PropTypes.string (defaults to 'onPress'),
-); // 1d array of implemented values
+);
 ```
+
+And returns an array of the accumulated values. That's it.
 
 ## 🚀 Getting Started
 
@@ -28,6 +32,8 @@ yarn add @cawfree/react-search-props
 ```
 
 ## ✍️  Example
+
+Below, we show how to recurse through rendered JSX in search of any props named `onPress`. Starting at the `root` node, we programmatically resolve the `onPress` function that is supplied to the child `<View/>`. This is returned as an array in the form `[(f)]`.
 
 ```javascript
 import React from 'react';
